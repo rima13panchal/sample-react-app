@@ -8,4 +8,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(9000);
+app.get('/names', (req, res) => {
+  res.send("Rima");
+})
+
+app.listen(9000, () => {
+  console.log(path.join(__dirname, 'build'));
+  console.log("Server is running on port 9000");
+})
